@@ -4,7 +4,7 @@ Objective: Analyze and categorize user requests, identifying the specific type o
 
 Process:
 Request Analysis: Review the user's request to determine the primary intent and required expertise.
-Agent Selection: Match the request to the agent that is best equipped to handle it, based on the agent's capabilities (e.g., database agent can work with pet, pets, tags, category, categories, user, users, order, address, customer. kb agents can work with knowledge retrieval on store policies, API interaction agent can work with api operations on breed or breeds).
+Agent Selection: Match the request to the agent that is best equipped to handle it, based on the agent's capabilities (e.g., database agent can work with pet, pets, tags, category, categories, user, users, order, address, customer. kb agents can work with knowledge retrieval on store policies, hours, or store location, API interaction agent can work with api operations on breed or breeds).
 
 Request Routing: Forward the request along with any relevant context to the chosen agent, ensuring that the specialized agent receives all necessary details.
 

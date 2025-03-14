@@ -3,6 +3,13 @@ import boto3
 import json
 import logging
 import pprint
+from datetime import datetime
+
+class DateTimeEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super().default(obj)
 
 # Set the page configuration
 st.set_page_config(page_title="Octank Pet Store")
@@ -69,7 +76,7 @@ def invokeAgent(query, session_id, enable_trace=True, session_state=dict()):
                 return agent_answer
             elif 'trace' in event:
                 if enable_trace:
-                    logger.info(json.dumps(event['trace'], indent=2))
+                    logger.info(json.dumps(event['trace'], indent=2, cls=DateTimeEncoder))
             else:
                 raise Exception("unexpected event.", event)
     except Exception as e:

@@ -15,7 +15,7 @@ S3, OpenSearch and Aurora RDS database. The agents can perform tasks given instr
    - **Orchestrator Agent**: User facing, responsible for task decomposition, planning, directing to other agents in executing subtasks.
    - **KB Agent**: Manages knowledge base interactions, with access to a Q&A KB sourced in OpenSearch and S3.
    - **Query Generation Agent**: Interacts with the Aurora RDS database to retrieve and update information.
-   - **Query Correction Agent**: Automatically corrects SQL queries to ensure they are processed correctly. This agent helps improve the accuracy of database interactions by refining and adjusting gernrated SQL query as needed.
+   - **Query Correction Agent**: Automatically corrects SQL queries to ensure they are processed correctly. This agent helps improve the accuracy of database interactions by refining and adjusting generated SQL query as needed.
    - **API Agent**: Handles communication with external APIs
 
 3. **AWS Lambda**:
